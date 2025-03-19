@@ -13,7 +13,7 @@ const gemini_api_key = process.env.gemini_api_key;
 app.post('/generate-text', async (req, res) => {
     try {
         const { prompt } = req.body; // Business context prompt
-        const response = await axios.post(`https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateText?key=${GEMINI_API_KEY}`, {
+        const response = await axios.post(`https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateText?key=${gemini_api_key}`, {
             prompt: { text: prompt }
         });
 
